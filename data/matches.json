@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": 1786180831472,
+    "round": "自動取得",
+    "date": "2026-08-08",
+    "teamA": "長崎日大",
+    "teamB": "立正大淞南",
+    "scoreA": 15,
+    "scoreB": 1,
+    "winner": "長崎日大",
+    "loser": "立正大淞南",
+    "source": "https://www.asahi.com/koshien/",
+    "auto": true
+  },
+  {
+    "id": 1786180831473,
+    "round": "自動取得",
+    "date": "2026-08-08",
+    "teamA": "長崎日大",
+    "teamB": "立正大淞南",
+    "scoreA": 15,
+    "scoreB": 1,
+    "winner": "長崎日大",
+    "loser": "立正大淞南",
+    "source": "https://www.asahi.com/koshien/",
+    "auto": true
+  },
+  {
+    "id": 1786180831474,
+    "round": "自動取得",
+    "date": "2026-08-08",
+    "teamA": "有明",
+    "teamB": "立命館宇治",
+    "scoreA": 6,
+    "scoreB": 3,
+    "winner": "有明",
+    "loser": "立命館宇治",
+    "source": "https://www.asahi.com/koshien/",
+    "auto": true
+  },
+  {
+    "id": 1786180831475,
+    "round": "自動取得",
+    "date": "2026-08-08",
+    "teamA": "有明",
+    "teamB": "立命館宇治",
+    "scoreA": 6,
+    "scoreB": 3,
+    "winner": "有明",
+    "loser": "立命館宇治",
+    "source": "https://www.asahi.com/koshien/",
+    "auto": true
+  },
+  {
+    "id": 1786180831476,
+    "round": "自動取得",
+    "date": "2026-08-08",
+    "teamA": "健大高崎",
+    "teamB": "八幡商",
+    "scoreA": 7,
+    "scoreB": 1,
+    "winner": "健大高崎",
+    "loser": "八幡商",
+    "source": "https://www.asahi.com/koshien/",
+    "auto": true
+  }
+]
