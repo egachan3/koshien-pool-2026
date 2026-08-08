@@ -2,7 +2,7 @@ name: Koshien Daily Update
 
 on:
   schedule:
-    # 21:00 JST = 12:00 UTC（大会期間中だけ動かせば十分なので、終わったらこのファイルを消すかコメントアウトでOK）
+    # # 21:00 JST = 12:00 UTC（大会期間中だけ動かせば十分なので、終わったらこのファイルを消すかコメントアウトでOK）
     # - cron: '0 12 * * *'
   workflow_dispatch: {}   # 手動で「今すぐ実行」もできるようにしておく
 
@@ -22,7 +22,10 @@ jobs:
           node-version: 20
 
       - name: Install deps
-        run: npm install cheerio
+        run: npm install playwright
+
+      - name: Install Chromium (Playwright)
+        run: npx playwright install --with-deps chromium
 
       - name: Fetch results
         run: node scripts/fetch-results.mjs
