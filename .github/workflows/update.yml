@@ -3,7 +3,7 @@ name: Koshien Daily Update
 on:
   schedule:
     # 21:00 JST = 12:00 UTC（大会期間中だけ動かせば十分なので、終わったらこのファイルを消すかコメントアウトでOK）
-    - cron: '0 12 * * *'
+    # - cron: '0 12 * * *'
   workflow_dispatch: {}   # 手動で「今すぐ実行」もできるようにしておく
 
 permissions:
