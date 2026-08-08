@@ -1,9 +1,8 @@
 name: Koshien Daily Update
 
 on:
-  # 大会期間中はここのコメントを外して自動実行を有効化する
-  # schedule:
-  #   - cron: '0 12 * * *'  # 21:00 JST = 12:00 UTC
+  schedule:
+    - cron: '0 12 * * *'  # 21:00 JST = 12:00 UTC
   workflow_dispatch: {}   # 手動で「今すぐ実行」もできるようにしておく
 
 permissions:
