@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>甲子園 個人成績板</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #12100e; --bg-2: #1a1714; --tile: #211d18; --tile-border: #3a332a;
+    --cream: #f2ead9; --cream-dim: #b8ad96; --gold: #c9a227; --gold-bright: #e6c14e;
+    --danger: #a4432f;
+  }
+  *{ box-sizing:border-box; min-width:0; }
+  html{ -webkit-text-size-adjust:100%; text-size-adjust:100%; -webkit-font-smoothing:antialiased; }
+  html,body{ margin:0; padding:0; background:transparent; width:100%; overflow-x:hidden; }
+  body{
+    font-family:'Noto Sans JP', sans-serif; color:var(--cream);
+    background: radial-gradient(ellipse 900px 500px at 50% -10%, rgba(53,84,63,0.35), transparent 60%), var(--bg);
+    min-height:100vh; padding:28px 16px 60px; -webkit-tap-highlight-color:transparent;
+  }
+  .wrap{ max-width:920px; margin:0 auto; width:100%; }
+  .board-header{ text-align:center; margin-bottom:28px; }
+  .eyebrow{ font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.32em; color:var(--gold); text-transform:uppercase; margin-bottom:10px; }
+  h1{ font-family:'Shippori Mincho', serif; font-weight:800; font-size:clamp(28px,5vw,42px); margin:0 0 6px; letter-spacing:0.06em; }
+  .sub{ font-size:13px; color:var(--cream-dim); }
+  .rule{ height:2px; max-width:280px; margin:18px auto 0; background:linear-gradient(90deg,transparent, var(--gold) 20%, var(--gold-bright) 50%, var(--gold) 80%, transparent); opacity:0.7; }
+  .updated-note{ text-align:center; font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--cream-dim); margin-top:10px; }
+  .hero{ display:flex; align-items:center; justify-content:center; gap:22px; background:linear-gradient(180deg, var(--bg-2), var(--bg)); border:1px solid var(--tile-border); border-radius:6px; padding:22px 24px; margin-bottom:30px; }
+  .hero-label{ font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--gold); letter-spacing:0.28em; text-transform:uppercase; }
+  .hero-name{ font-family:'Shippori Mincho', serif; font-weight:800; font-size:clamp(30px,6vw,46px); color:var(--gold-bright); line-height:1; }
+  .hero-count{ font-family:'JetBrains Mono', monospace; font-weight:700; font-size:clamp(38px,7vw,58px); color:var(--cream); line-height:1; }
+  .hero-count small{ font-size:14px; color:var(--cream-dim); font-weight:400; margin-left:6px; }
+  .hero-empty{ text-align:center; color:var(--cream-dim); font-size:14px; }
+  section{ margin-bottom:34px; }
+  .sec-title{ display:flex; align-items:baseline; gap:10px; margin-bottom:14px; }
+  .sec-title .num{ font-family:'JetBrains Mono', monospace; color:var(--gold); font-size:12px; border:1px solid var(--tile-border); border-radius:2px; padding:2px 6px; }
+  .sec-title h2{ font-family:'Shippori Mincho', serif; font-size:18px; font-weight:700; margin:0; }
+  .sec-note{ font-size:11.5px; color:var(--cream-dim); margin:0 0 16px; line-height:1.6; }
+  .rank-row{ display:flex; align-items:center; gap:10px; background:var(--bg-2); border:1px solid var(--tile-border); border-radius:4px; padding:12px 14px; margin-bottom:8px; overflow:hidden; width:100%; }
+  .rank-row.lead{ border-color:var(--gold); box-shadow:0 0 0 1px rgba(201,162,39,0.25), 0 0 20px rgba(201,162,39,0.08); }
+  .rank-pos{ font-family:'JetBrains Mono', monospace; font-size:15px; color:var(--cream-dim); text-align:center; flex:0 0 22px; }
+  .rank-row.lead .rank-pos{ color:var(--gold-bright); }
+  .rank-owner{ font-family:'Shippori Mincho', serif; font-weight:700; font-size:15.5px; color:var(--cream); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:0 0 88px; }
+  .tiles{ display:flex; gap:5px; flex:1 1 auto; min-width:0; }
+  .tile{ background:var(--tile); border:1px solid var(--tile-border); border-radius:2px; padding:5px 3px; text-align:center; flex:1 1 0; min-width:0; overflow:hidden; }
+  .tile .school{ font-size:9.5px; color:var(--cream-dim); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-bottom:2px; }
+  .tile .wins{ font-family:'JetBrains Mono', monospace; font-weight:700; font-size:16px; color:var(--cream); }
+  .tile.eliminated{ opacity:0.35; }
+  .tile.eliminated .wins{ color:var(--danger); }
+  .rank-total{ text-align:right; font-family:'JetBrains Mono', monospace; font-weight:700; font-size:22px; color:var(--gold-bright); flex:0 0 58px; }
+  .rank-total small{ font-size:10px; color:var(--cream-dim); font-weight:400; display:block; margin-top:-2px; }
+  @media (max-width:600px){
+    .rank-row{ padding:9px 8px; gap:6px; }
+    .rank-pos{ flex-basis:16px; font-size:12px; }
+    .rank-owner{ flex-basis:56px; font-size:12px; }
+    .tile .school{ font-size:8px; }
+    .tile .wins{ font-size:13px; }
+    .rank-total{ flex-basis:40px; font-size:16px; }
+  }
+  .log-list{ display:flex; flex-direction:column; gap:6px; }
+  .log-row{ display:flex; align-items:center; gap:8px; background:var(--bg-2); border:1px solid var(--tile-border); border-radius:3px; padding:9px 10px; font-size:13px; overflow:hidden; }
+  .log-round{ font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--gold); flex:0 0 60px; }
+  .log-match{ flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .log-match .win{ color:var(--cream); font-weight:700; } .log-match .lose{ color:var(--cream-dim); } .log-match .vs{ color:var(--cream-dim); margin:0 6px; font-size:11px; }
+  .log-score{ font-family:'JetBrains Mono', monospace; color:var(--cream-dim); font-size:12.5px; flex:0 0 auto; }
+  .empty-state{ text-align:center; color:var(--cream-dim); font-size:13px; padding:30px 10px; border:1px dashed var(--tile-border); border-radius:4px; }
+  footer{ text-align:center; font-size:11px; color:var(--cream-dim); margin-top:40px; opacity:0.7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="board-header">
+    <div class="eyebrow">第108回 全国高等学校野球選手権大会</div>
+    <h1>個人成績板</h1>
+    <div class="sub">毎晩21:00に自動更新（GitHub Actions）</div>
+    <div class="rule"></div>
+    <div class="updated-note" id="updatedNote"></div>
+  </div>
+  <div class="hero" id="hero"></div>
+  <section>
+    <div class="sec-title"><span class="num">01</span><h2>個人別ランキング</h2></div>
+    <div id="rankList"></div>
+  </section>
+  <section>
+    <div class="sec-title"><span class="num">02</span><h2>試合結果ログ</h2></div>
+    <p class="sec-note">結果に誤りがある場合は、リポジトリ内の data/matches.json を直接修正してください。</p>
+    <div class="log-list" id="logList"></div>
+  </section>
+  <footer>データ取得元はスクリプトが自動巡回。抜け漏れは data/matches.json を手動編集すれば反映されます。</footer>
+</div>
+<script>
+const OWNERS = {
+  "玉那覇":   ["佐賀商","神村学園","日本文理","佐野日大"],
+  "りゅうせい": ["天理","健大高崎","八王子実践","東日大昌平"],
+  "しんご":   ["敦賀気比","英明","明徳義塾","白樺学園"],
+  "しょうと":  ["履正社","有明","日南学園","聖隷クリストファー"],
+  "こうき":   ["社","東筑","岡山学芸館","横浜"],
+  "まっきー":  ["享栄","関東第一","立命館宇治","中京"],
+  "まさはる":  ["拓大紅陵","鶴岡東","札幌日大","霞ヶ浦"],
+  "よしひこ":  ["三重","遊学館","青森山田","八幡商"],
+  "かずほ":   ["福山","長崎日大","花巻東","鳥取城北"],
+  "よしや":   ["花咲徳栄","東海大甲府","大分商","立正大淞南"]
+};
+const SCHOOL_TO_OWNER = {};
+for (const [owner, schools] of Object.entries(OWNERS)) schools.forEach(s => SCHOOL_TO_OWNER[s] = owner);
+
+async function loadMatches(){
+  try{
+    const res = await fetch('data/matches.json?t=' + Date.now());
+    return await res.json();
+  }catch(e){ return []; }
+}
+
+function computeWinCounts(matches){
+  const counts = {};
+  Object.values(OWNERS).flat().forEach(s => counts[s] = 0);
+  matches.forEach(m => { if (counts[m.winner] !== undefined) counts[m.winner]++; });
+  return counts;
+}
+function isEliminated(school, matches){ return matches.some(m => m.loser === school); }
+
+function render(matches){
+  const counts = computeWinCounts(matches);
+  const ownerTotals = Object.entries(OWNERS).map(([owner, schools]) => ({
+    owner, total: schools.reduce((sum,s) => sum + (counts[s]||0), 0), schools
+  })).sort((a,b) => b.total - a.total);
+
+  const hero = document.getElementById('hero');
+  if (ownerTotals[0].total === 0){
+    hero.innerHTML = `<div class="hero-empty">まだ試合結果が記録されていません。</div>`;
+  } else {
+    const top = ownerTotals[0];
+    const tied = ownerTotals.filter(o => o.total === top.total);
+    const label = tied.length > 1 ? '首位タイ' : '現在の首位';
+    const name = tied.length > 1 ? tied.map(o=>o.owner).join(' / ') : top.owner;
+    hero.innerHTML = `<div><div class="hero-label">${label}</div><div class="hero-name">${name}</div></div><div class="hero-count">${top.total}<small>勝</small></div>`;
+  }
+
+  document.getElementById('rankList').innerHTML = ownerTotals.map((o, i) => {
+    const tilesHtml = o.schools.map(s => {
+      const w = counts[s] || 0;
+      const elim = isEliminated(s, matches) ? ' eliminated' : '';
+      return `<div class="tile${elim}"><div class="school">${s}</div><div class="wins">${w}</div></div>`;
+    }).join('');
+    return `<div class="rank-row${i===0 && o.total>0 ? ' lead':''}">
+      <div class="rank-pos">${i+1}</div><div class="rank-owner">${o.owner}</div>
+      <div class="tiles">${tilesHtml}</div><div class="rank-total">${o.total}<small>勝</small></div></div>`;
+  }).join('');
+
+  const logList = document.getElementById('logList');
+  logList.innerHTML = matches.length === 0
+    ? `<div class="empty-state">まだ試合結果がありません。</div>`
+    : [...matches].reverse().map(m => {
+        const aIsWin = m.winner === m.teamA;
+        const tag = SCHOOL_TO_OWNER[m.winner] ? ` <span style="color:var(--gold);font-size:11px;">(${SCHOOL_TO_OWNER[m.winner]})</span>` : '';
+        return `<div class="log-row"><div class="log-round">${m.round}</div>
+          <div class="log-match"><span class="${aIsWin?'win':'lose'}">${m.teamA}</span><span class="vs">vs</span><span class="${aIsWin?'lose':'win'}">${m.teamB}</span>${tag}</div>
+          <div class="log-score">${m.scoreA} - ${m.scoreB}</div></div>`;
+      }).join('');
+}
+
+(async function init(){
+  const matches = await loadMatches();
+  render(matches);
+  document.getElementById('updatedNote').textContent = '最終読み込み: ' + new Date().toLocaleString('ja-JP');
+})();
+</script>
+</body>
+</html>
