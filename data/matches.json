@@ -128,5 +128,18 @@
     "loser": "日本文理",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786192724865,
+    "round": "1回戦",
+    "date": "2026-08-08",
+    "teamA": "関東第一",
+    "teamB": "英明",
+    "scoreA": 1,
+    "scoreB": 4,
+    "winner": "英明",
+    "loser": "関東第一",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
