@@ -141,5 +141,57 @@
     "loser": "関東第一",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786279250676,
+    "round": "1回戦",
+    "date": "2026-08-09",
+    "teamA": "新田",
+    "teamB": "花巻東",
+    "scoreA": 2,
+    "scoreB": 4,
+    "winner": "花巻東",
+    "loser": "新田",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786279250677,
+    "round": "1回戦",
+    "date": "2026-08-09",
+    "teamA": "鳥取城北",
+    "teamB": "岡山学芸館",
+    "scoreA": 3,
+    "scoreB": 7,
+    "winner": "岡山学芸館",
+    "loser": "鳥取城北",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786279250678,
+    "round": "1回戦",
+    "date": "2026-08-09",
+    "teamA": "鳴門渦潮",
+    "teamB": "八王子実践",
+    "scoreA": 2,
+    "scoreB": 1,
+    "winner": "鳴門渦潮",
+    "loser": "八王子実践",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786279250679,
+    "round": "1回戦",
+    "date": "2026-08-09",
+    "teamA": "中京",
+    "teamB": "霞ケ浦",
+    "scoreA": 3,
+    "scoreB": 6,
+    "winner": "霞ケ浦",
+    "loser": "中京",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
