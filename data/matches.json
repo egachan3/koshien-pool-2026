@@ -193,5 +193,44 @@
     "loser": "中京",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786366709677,
+    "round": "1回戦",
+    "date": "2026-08-10",
+    "teamA": "日南学園",
+    "teamB": "明徳義塾",
+    "scoreA": 2,
+    "scoreB": 1,
+    "winner": "日南学園",
+    "loser": "明徳義塾",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786366709678,
+    "round": "1回戦",
+    "date": "2026-08-10",
+    "teamA": "沖縄尚学",
+    "teamB": "横浜",
+    "scoreA": 2,
+    "scoreB": 7,
+    "winner": "横浜",
+    "loser": "沖縄尚学",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786366709679,
+    "round": "2回戦",
+    "date": "2026-08-10",
+    "teamA": "福山",
+    "teamB": "天理",
+    "scoreA": 2,
+    "scoreB": 7,
+    "winner": "天理",
+    "loser": "福山",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
