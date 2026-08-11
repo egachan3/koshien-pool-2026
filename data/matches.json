@@ -232,5 +232,57 @@
     "loser": "福山",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786452870632,
+    "round": "2回戦",
+    "date": "2026-08-11",
+    "teamA": "横手",
+    "teamB": "敦賀気比",
+    "scoreA": 0,
+    "scoreB": 10,
+    "winner": "敦賀気比",
+    "loser": "横手",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786452870633,
+    "round": "2回戦",
+    "date": "2026-08-11",
+    "teamA": "社",
+    "teamB": "智弁和歌山",
+    "scoreA": 1,
+    "scoreB": 2,
+    "winner": "智弁和歌山",
+    "loser": "社",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786452870634,
+    "round": "2回戦",
+    "date": "2026-08-11",
+    "teamA": "享栄",
+    "teamB": "履正社",
+    "scoreA": 2,
+    "scoreB": 6,
+    "winner": "履正社",
+    "loser": "享栄",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786452870635,
+    "round": "2回戦",
+    "date": "2026-08-11",
+    "teamA": "三重",
+    "teamB": "松商学園",
+    "scoreA": 5,
+    "scoreB": 3,
+    "winner": "三重",
+    "loser": "松商学園",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
