@@ -284,5 +284,44 @@
     "loser": "松商学園",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786539555623,
+    "round": "2回戦",
+    "date": "2026-08-12",
+    "teamA": "佐賀商",
+    "teamB": "拓大紅陵",
+    "scoreA": 0,
+    "scoreB": 1,
+    "winner": "拓大紅陵",
+    "loser": "佐賀商",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786539555624,
+    "round": "2回戦",
+    "date": "2026-08-12",
+    "teamA": "仙台育英",
+    "teamB": "花咲徳栄",
+    "scoreA": 1,
+    "scoreB": 0,
+    "winner": "仙台育英",
+    "loser": "花咲徳栄",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786539555625,
+    "round": "2回戦",
+    "date": "2026-08-12",
+    "teamA": "神村学園",
+    "teamB": "佐野日大",
+    "scoreA": 1,
+    "scoreB": 3,
+    "winner": "佐野日大",
+    "loser": "神村学園",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
