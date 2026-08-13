@@ -323,5 +323,57 @@
     "loser": "神村学園",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786625999201,
+    "round": "2回戦",
+    "date": "2026-08-13",
+    "teamA": "健大高崎",
+    "teamB": "東海大甲府",
+    "scoreA": 1,
+    "scoreB": 0,
+    "winner": "健大高崎",
+    "loser": "東海大甲府",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786625999202,
+    "round": "2回戦",
+    "date": "2026-08-13",
+    "teamA": "有明",
+    "teamB": "長崎日大",
+    "scoreA": 3,
+    "scoreB": 2,
+    "winner": "有明",
+    "loser": "長崎日大",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786625999203,
+    "round": "2回戦",
+    "date": "2026-08-13",
+    "teamA": "東日大昌平",
+    "teamB": "青森山田",
+    "scoreA": 6,
+    "scoreB": 2,
+    "winner": "東日大昌平",
+    "loser": "青森山田",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786625999204,
+    "round": "2回戦",
+    "date": "2026-08-13",
+    "teamA": "大分商",
+    "teamB": "英明",
+    "scoreA": 1,
+    "scoreB": 6,
+    "winner": "英明",
+    "loser": "大分商",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
