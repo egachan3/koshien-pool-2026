@@ -375,5 +375,31 @@
     "loser": "大分商",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786712160587,
+    "round": "2回戦",
+    "date": "2026-08-14",
+    "teamA": "岡山学芸館",
+    "teamB": "花巻東",
+    "scoreA": 1,
+    "scoreB": 4,
+    "winner": "花巻東",
+    "loser": "岡山学芸館",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786712160588,
+    "round": "2回戦",
+    "date": "2026-08-14",
+    "teamA": "日南学園",
+    "teamB": "横浜",
+    "scoreA": 1,
+    "scoreB": 10,
+    "winner": "横浜",
+    "loser": "日南学園",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
