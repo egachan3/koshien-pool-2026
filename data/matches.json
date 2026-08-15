@@ -401,5 +401,57 @@
     "loser": "日南学園",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786796936038,
+    "round": "3回戦",
+    "date": "2026-08-15",
+    "teamA": "高川学園",
+    "teamB": "天理",
+    "scoreA": 3,
+    "scoreB": 6,
+    "winner": "天理",
+    "loser": "高川学園",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786796936039,
+    "round": "3回戦",
+    "date": "2026-08-15",
+    "teamA": "敦賀気比",
+    "teamB": "智弁和歌山",
+    "scoreA": 3,
+    "scoreB": 7,
+    "winner": "智弁和歌山",
+    "loser": "敦賀気比",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786796936040,
+    "round": "3回戦",
+    "date": "2026-08-15",
+    "teamA": "三重",
+    "teamB": "履正社",
+    "scoreA": 5,
+    "scoreB": 2,
+    "winner": "三重",
+    "loser": "履正社",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786796936041,
+    "round": "3回戦",
+    "date": "2026-08-15",
+    "teamA": "拓大紅陵",
+    "teamB": "仙台育英",
+    "scoreA": 3,
+    "scoreB": 6,
+    "winner": "仙台育英",
+    "loser": "拓大紅陵",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
