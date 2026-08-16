@@ -453,5 +453,57 @@
     "loser": "拓大紅陵",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1786883437813,
+    "round": "3回戦",
+    "date": "2026-08-16",
+    "teamA": "健大高崎",
+    "teamB": "佐野日大",
+    "scoreA": 4,
+    "scoreB": 1,
+    "winner": "健大高崎",
+    "loser": "佐野日大",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786883437814,
+    "round": "3回戦",
+    "date": "2026-08-16",
+    "teamA": "東日大昌平",
+    "teamB": "有明",
+    "scoreA": 1,
+    "scoreB": 4,
+    "winner": "有明",
+    "loser": "東日大昌平",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786883437815,
+    "round": "3回戦",
+    "date": "2026-08-16",
+    "teamA": "花巻東",
+    "teamB": "英明",
+    "scoreA": 4,
+    "scoreB": 0,
+    "winner": "花巻東",
+    "loser": "英明",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
+  },
+  {
+    "id": 1786883437816,
+    "round": "3回戦",
+    "date": "2026-08-16",
+    "teamA": "霞ケ浦",
+    "teamB": "横浜",
+    "scoreA": 2,
+    "scoreB": 5,
+    "winner": "横浜",
+    "loser": "霞ケ浦",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
