@@ -570,5 +570,18 @@
     "loser": "天理",
     "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
     "auto": true
+  },
+  {
+    "id": 1787401818823,
+    "round": "決勝",
+    "date": "2026-08-22",
+    "teamA": "智弁和歌山",
+    "teamB": "健大高崎",
+    "scoreA": 4,
+    "scoreB": 3,
+    "winner": "智弁和歌山",
+    "loser": "健大高崎",
+    "source": "https://baseball.yahoo.co.jp/hsb_summer/schedule/competition",
+    "auto": true
   }
 ]
